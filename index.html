@@ -11,9 +11,11 @@
             text-align: center; 
             color: white; /* Poore page ka text white ho jayega */
             margin: 0;
-            padding: 20px;
+            padding: 0; /* Navbar ko full corner se chipkane ke liye */
+            padding-bottom: 40px;
         }
- .profile-pic {
+
+        .profile-pic {
             width: 150px;
             height: 150px;
             border-radius: 50%; 
@@ -59,7 +61,8 @@
             margin: 30px auto;
             max-width: 600px;
         }
-/* ✍️ Intro Section Ki Styling */
+
+        /* ✍️ Intro Section Ki Styling */
         .intro-box {
             max-width: 600px;
             margin: 20px auto 30px auto;
@@ -119,6 +122,7 @@
             font-size: 14px;
             transition: 0.3s;
             outline: none; /* Blue default border khatam */
+            color: #333333; /* Form ke andar text black dikhane ke liye */
         }
 
         /* Input click karne par glow karega */
@@ -147,6 +151,7 @@
             transform: translateY(-3px); /* Button thoda upar uthega browser par */
             box-shadow: 0px 8px 20px rgba(52, 152, 219, 0.5); 
         }
+
         /* 🔗 Naye Buttons Ka Flexbox Dabba */
         .social-box {
             display: flex;
@@ -187,6 +192,7 @@
             transform: translateY(-3px);
             box-shadow: 0px 8px 20px rgba(37, 211, 102, 0.4);
         }
+
         /* ✨ Pure Page Par Smooth Scrolling Lagane Ke Liye */
         html {
             scroll-behavior: smooth;
@@ -238,6 +244,7 @@
     </style>
 </head>
 <body>
+
     <!-- 🧭 Website Ka VIP Top Menu -->
     <nav class="navbar">
         <div class="nav-logo">Zain.Dev</div>
@@ -248,10 +255,10 @@
         </div>
     </nav>
     
-    <!-- Tasveer sabse upar taake professional lage -->
- <!-- Tasveer sabse upar taake professional lage -->
-<img src="https://i.ibb.co/ccCbxym2/my-pic.jpg" alt="Zainulabdin" class="profile-pic">
- <h1>ZAIN UL ABDIN MEMON</h1>
+    <!-- Tasveer sabse upar taake professional lage (Fixed Class!) -->
+    <img src="https://i.ibb.co/ccCbxym2/my-pic.jpg" alt="Zainulabdin" class="profile-pic">
+
+    <h1>ZAIN UL ABDIN MEMON</h1>
     <h3>Web Developer & Coder</h3>
     
     <!-- 🎯 ID Lagayi taake Resume link chal sake -->
@@ -262,13 +269,14 @@
              Hello! I am an IT student currently pursuing my second year at the University of Sindh. I have a strong passion for technology and software development. Right now, I am completely invested in my coding journey—learning modern frameworks, writing clean code, and working on web projects. My goal is to transform creative ideas into functional, interactive digital experiences as I grow into a professional developer.
         </p>
     </div>
+    
     <h2 id="skills-section">My Resume & Skills</h2>
     <ul>
         <li>HTML5</li>
         <li>CSS3</li>
         <li>Hover Effects & Animations</li>
         <li>Responsive Design</li>
-  <li>Google AI</li>
+        <li>Google AI</li>
     </ul>
     
     <!-- 🎯 ID Lagayi taake Contact link chal sake -->
