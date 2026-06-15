@@ -1,0 +1,300 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Zainulabdin - Portfolio</title>
+    <style>
+        body {
+            /* 🌌 Ekdum pro-level dark gradient background */
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); 
+            background-attachment: fixed;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern clean font */
+            text-align: center; 
+            color: white; /* Poore page ka text white ho jayega */
+            margin: 0;
+            padding: 20px;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; 
+            border: 4px solid #3498db;  /* Neon Blue border color */
+            box-shadow: 0px 8px 25px rgba(52, 152, 219, 0.4); /* Glow effect shadow */
+            display: block;
+            margin: 30px auto 10px auto;
+            transition: transform 0.3s ease;
+        }
+        
+        /* Pic par mouse le jaane se scale hoga */
+        .profile-pic:hover {
+            transform: scale(1.08);
+            cursor: pointer;
+        }
+
+        h1 {
+            color: white;
+            font-size: 32px;
+            text-shadow: 2px 4px 10px rgba(0,0,0,0.5); /* 3D effect shadow */
+            margin: 5px;
+            letter-spacing: 1px; /* Lafzon ke beech thodi VIP jagah */
+            transition: transform 0.3s ease;
+        }
+        h1:hover{
+            transform: scale(1.08);
+            cursor: progress;
+        }
+        h3 {
+            color: #bdc3c7; /* Light silver grey color */
+            margin-top: 5px;
+            font-weight: 300;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #3498db, transparent); /* Stylish center line */
+            margin: 30px auto;
+            max-width: 600px;
+        }
+/* ✍️ Intro Section Ki Styling */
+        .intro-box {
+            max-width: 600px;
+            margin: 20px auto 30px auto;
+            padding: 0 20px;
+        }
+
+        .intro-box p {
+            font-size: 16px;
+            color: #bdc3c7; /* Light silver color jo parhne mein sukoon de */
+            line-height: 1.8; /* Paragraph ki lines ke beech ka faasla */
+            letter-spacing: 0.5px;
+        }
+
+        /* 📋 Skills List ki nayi styling */
+        ul {
+            list-style: none; /* Boring dots khatam */
+            padding: 0;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+
+        li {
+            background: rgba(255, 255, 255, 0.1); /* Halka sa glass jaisa background */
+            margin: 10px 0;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db; /* Left side par blue patti */
+            transition: all 0.3s ease;
+            text-align: left;
+            text-indent: 15px;
+        }
+
+        li:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(10px); /* Jadoo se thoda right side khiske ga */
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* ✉️ Form Aur Inputs Ki Styling */
+        form {
+            background-color: #ffffff;
+            max-width: 380px;
+            margin: 30px auto; 
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        input, textarea {
+            width: 90%;
+            padding: 12px;
+            margin-bottom: 15px; /* CSS se space de di, ab <br> ki zaroorat nahi */
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-family: sans-serif;
+            font-size: 14px;
+            transition: 0.3s;
+            outline: none; /* Blue default border khatam */
+        }
+
+        /* Input click karne par glow karega */
+        input:focus, textarea:focus {
+            border-color: #3498db;
+            box-shadow: 0px 0px 8px rgba(52, 152, 219, 0.3);
+            color: #333;
+        }
+
+        button {
+            width: 97%;
+            background: linear-gradient(to right, #2980b9, #3498db); /* Gradient button */
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0px 5px 15px rgba(52, 152, 219, 0.3);
+            transition: all 0.3s ease; 
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #3498db, #2980b9);
+            transform: translateY(-3px); /* Button thoda upar uthega browser par */
+            box-shadow: 0px 8px 20px rgba(52, 152, 219, 0.5); 
+        }
+        /* 🔗 Naye Buttons Ka Flexbox Dabba */
+        .social-box {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Dono buttons ke beech ka gap */
+            margin: 30px auto;
+        }
+
+        /* Dono links ki common styling (Capsule Look) */
+        .portfolio-link {
+            text-decoration: none; /* Neeche wali boring line khatam */
+            font-size: 16px;
+            font-weight: bold;
+            padding: 12px 25px;
+            border-radius: 30px; /* Ekdum gol capsule */
+            transition: all 0.3s ease;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 1. Cricket Project Button Ka Rang (Chamakdar Blue) */
+        .check-work {
+            background-color: #3498db;
+            color: white;
+        }
+        .check-work:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0px 8px 20px rgba(52, 152, 219, 0.4);
+        }
+
+        /* 2. WhatsApp Button Ka Rang (Asli WhatsApp Green) */
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white;
+        }
+        .whatsapp-btn:hover {
+            background-color: #20ba5a;
+            transform: translateY(-3px);
+            box-shadow: 0px 8px 20px rgba(37, 211, 102, 0.4);
+        }
+        /* ✨ Pure Page Par Smooth Scrolling Lagane Ke Liye */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* 🧭 Poore Menu Ki Main Patti */
+        .navbar {
+            display: flex;
+            justify-content: space-between; /* Logo left par, links right par! */
+            align-items: center; /* Sab kuch vertically center rahe */
+            background: rgba(255, 255, 255, 0.05); /* Halka sa glass jaisa look */
+            backdrop-filter: blur(10px); /* Piche ka background blur karne ke liye */
+            padding: 15px 40px;
+            position: sticky; /* 📌 Scroll karne par bhi menu upar hi chipka rahega! */
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Taake menu baki samaan ke upar rahe, piche na chupe */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* 👑 Logo Styling */
+        .nav-logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #3498db; /* Neon Blue logo */
+            letter-spacing: 1px;
+        }
+
+        /* 🔗 Links Ka Dabba (Isme bhi Flexbox taake teenon ek line mein aayin) */
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        /* Links Ka Make-up */
+        .nav-links a {
+            color: #bdc3c7;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        /* Link par mouse le jaane ka jadoo */
+        .nav-links a:hover {
+            color: white;
+            text-shadow: 0px 0px 10px rgba(52, 152, 219, 0.8); /* Halki chamak */
+        }
+    </style>
+</head>
+<body>
+    <!-- 🧭 Website Ka VIP Top Menu -->
+    <nav class="navbar">
+        <div class="nav-logo">Zain.Dev</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#skills-section">Resume</a>
+            <a href="#contact-section">Contact</a>
+        </div>
+    </nav>
+    
+    <!-- Tasveer sabse upar taake professional lage -->
+    <img src="my pic.jpg" alt="Zain's Photo" class="profile-pic">
+
+    <h1>ZAIN UL ABDIN MEMON</h1>
+    <h3>Web Developer & Coder</h3>
+    
+    <!-- 🎯 ID Lagayi taake Resume link chal sake -->
+    <hr>
+    <!-- ✍️ Zain Bhai Ka VIP Intro Section -->
+    <div class="intro-box">
+        <p>
+             Hello! I am an IT student currently pursuing my second year at the University of Sindh. I have a strong passion for technology and software development. Right now, I am completely invested in my coding journey—learning modern frameworks, writing clean code, and working on web projects. My goal is to transform creative ideas into functional, interactive digital experiences as I grow into a professional developer.
+        </p>
+    </div>
+    <h2 id="skills-section">My Resume & Skills</h2>
+    <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>Hover Effects & Animations</li>
+        <li>Responsive Design</li>
+  <li>Google AI</li>
+    </ul>
+    
+    <!-- 🎯 ID Lagayi taake Contact link chal sake -->
+    <hr>
+    <h2 id="contact-section">Contact Me</h2>
+
+    <!-- Clean form bina kisi purane <br> tags ke -->
+    <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea placeholder="Your Message" rows="4"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    
+    <hr>
+    <h2>Connect With Me</h2>
+    
+    <!-- 📦 Flexbox ka naya dabba dono buttons ke liye -->
+    <div class="social-box">
+        <!-- 🏏 Babar Azam Page Ka Link -->
+        <a href="file:///D:/WEB%20DEVELOPMENT/birth.html" target="_blank" class="portfolio-link check-work">
+            My Cricket Project
+        </a>
+
+        <!-- 💬 Direct WhatsApp Chat Ka Link -->
+        <a href="https://wa.me/923053548441?text=Hi%20Zain,I just saw your portfolio!" target="_blank" class="portfolio-link whatsapp-btn">
+            Chat on WhatsApp
+        </a>
+    </div>
+    
+</body>
+</html>
