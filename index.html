@@ -13,8 +13,7 @@
             margin: 0;
             padding: 20px;
         }
-
-        .profile-pic {
+ .profile-pic {
             width: 150px;
             height: 150px;
             border-radius: 50%; 
@@ -23,6 +22,10 @@
             display: block;
             margin: 30px auto 10px auto;
             transition: transform 0.3s ease;
+            
+            /* ✨ Yeh 2 lines tasveer ko khinchne (stretch) se bachaengi */
+            object-fit: cover; 
+            object-position: center;
         }
         
         /* Pic par mouse le jaane se scale hoga */
