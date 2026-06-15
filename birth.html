@@ -1,0 +1,113 @@
+ <!DOCTYPE html>
+<html>
+<head> 
+    <title>BABAR AZAM</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: sans-serif;
+            background: linear-gradient(to right, darkgreen, lightgreen);
+            background-attachment: fixed; 
+            color: white; 
+        }
+
+        h1 {
+            color: white; 
+            text-shadow: 2px 2px 5px black; /* ✨ Ab yeh jadoo chalega! */
+            transition: transform 0.3s ease;  
+        }
+h1:hover{
+    transform: scale(1.1);  
+}
+        .babar-pic {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;          
+            border: 5px solid darkgreen; 
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2); 
+            margin-top: 15px;
+            object-fit: cover;         
+            transition: transform 0.3s ease;  
+        }
+.babar-pic:hover {
+    transform: scale(1.1); /* 1.1 ka matlab hai 10% badi ho jana */
+cursor: pointer;
+    border-color: limegreen; /* Border ka rang bhi darkgreen se badal kar bright ho jayega! */
+}
+        p {
+            background-color: white;
+            max-width: 500px;         
+            margin: 25px auto;        
+            padding: 20px;            
+            border-radius: 12px;      
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.15); 
+            font-size: 18px;          
+            color: #333;              
+            line-height: 1.5;         
+        }
+
+        h3 {
+            text-shadow: 1px 1px 3px black; /* ✨ Yeh bhi chalega! */
+        }
+        li {
+    transition: all 0.3s ease; /* Smooth badlaav ke liye */
+}
+
+li:hover {
+    color: darkgreen; /* Mouse le jaane par text ka rang green ho jayega */
+    padding-left: 10px; /* Text thoda sa aage khisat jayega, jaise jadoo se ho raha ho! */
+    font-weight: bold; /* Lafz thode mote ho jayen ge */
+}
+/* 1. Button ka asli roop */
+.vip-btn {
+    background-color: darkgreen; /* Button ka rang */
+    color: white; /* Lafz ka rang */
+    font-size: 18px; /* Lafz thode bade */
+    padding: 12px 24px; /* Button ke andar ki jagah (motapa) */
+    border: none; /* Boring purani kali line khatam */
+    border-radius: 25px; /* Button ke koney ekdum gol capsule jaise */
+    cursor: pointer; /* Jab mouse jaye toh hath ka nishan bane */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Button ke piche kaala saaya */
+    margin-top: 20px; /* List se thoda neeche khiske */
+    transition: all 0.3s ease; /* Hover jadoo smooth karne ke liye */
+}
+
+/* 2. Button par Hover ka jadoo */
+.vip-btn:hover {
+    background-color: limegreen; /* Mouse le jaane par chamakdar green */
+    transform: scale(1.05); /* Thoda sa bada hoga */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4); /* Saaya aur gehra ho jayega */
+}
+.button-box {
+    display: flex;          /* ⚡ Yeh line sab kuch ek line mein le aayegi! */
+    justify-content: center; /* 🎯 Buttons ko screen ke center (beech) mein layega */
+    gap: 20px;              /* ↔️ Dono buttons ke beech 20px ka khoobsurat gap banayega */
+    margin-top: 30px;       /* ⬆️ List se buttons ko thoda neeche khiskayega */
+}
+    </style>
+</head>
+<body>
+
+    <h1>BABAR AZAM (The Pride Of Pakistan)</h1>
+     
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfBQxjydlv7nky32lplMvzqvTlBKXz4Ai1aA&s" alt="Babar Azam" class="babar-pic">
+       
+    <p>Babar Azam is an international Cricketer that play for Pakistan Mens team and he is the pride of Pakistan.</p>
+
+    <h3>Babar's Achievements</h3>
+    <ul style="list-style-position: inside; background-color: aliceblue; color: black;">
+        <li>Fastest 5000 ODI runs</li>
+        <li>ICC ODI Player of the Year</li>
+    </ul>
+ <!-- 📦 Yeh ban gaya dono buttons ka naya dabba -->
+<div class="button-box">
+    <a href="https://www.youtube.com/results?search_query=babar+azam+batting" target="_blank">
+        <button class="vip-btn">Watch Babar's Batting</button>
+    </a>
+
+    <a href="https://www.youtube.com/shorts/fI0Xk_rgHu0?feature=share" target="_blank">
+        <button class="vip-btn">Watch Babar's Catching</button>
+    </a>
+</div>
+</body>
+</html>
